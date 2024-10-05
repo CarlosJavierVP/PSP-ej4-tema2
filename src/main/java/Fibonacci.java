@@ -20,6 +20,7 @@ public class Fibonacci implements Runnable {
             Fibonacci fibo = new Fibonacci(n - 1);
             Thread t = new Thread(fibo);
             t.start();
+            //Con el método isAlive las hebras esperan a que estén las anteriores
             while(t.isAlive()){}
             n1 = fibo.getN1() + fibo.getN2();
             n2 = fibo.getN1();
