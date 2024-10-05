@@ -20,11 +20,11 @@ public class Fibonacci implements Runnable {
             Fibonacci fibo = new Fibonacci(n - 1);
             Thread t = new Thread(fibo);
             t.start();
-            while(t.isAlive()){
-                n1 = fibo.getN1() + fibo.getN2();
-                n2 = fibo.getN1();
-                System.out.println(n1);
-            }
+            while(t.isAlive()){}
+            n1 = fibo.getN1() + fibo.getN2();
+            n2 = fibo.getN1();
+            System.out.println(n1);
+
 
         }
     }
